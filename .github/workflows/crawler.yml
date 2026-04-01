@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: crawler-${{ github.ref_name }}
-  cancel-in-progress: true
+  group: crawler-retry-${{ github.run_id }}
+  cancel-in-progress: false
 
 permissions:
   contents: read
